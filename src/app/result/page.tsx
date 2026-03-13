@@ -251,8 +251,8 @@ export default async function ResultPage({ searchParams }: ResultPageProps) {
           </p>
 
           <div className="space-y-3">
-            {THEME_CARDS.map((card) => (
-              <LockedThemeCard key={card.key} {...card} />
+            {THEME_CARDS.map(({ key, ...card }) => (
+              <LockedThemeCard key={key} {...card} />
             ))}
             <ComingSoonCard />
           </div>
